@@ -4,6 +4,7 @@ function Results = NII_getlabel(nii_map, threshold)
 if ( ~exist('threshold', 'var') || isempty(threshold) )
     threshold = 2; % default threshold set to 2
 end
+tic;
 disp(['threshold is ', num2str(threshold)]);
 % initate report to speedup
 % [Results(1,1).spmNeuromorphometrics, Results(1,1).MaxRegion, Results(1,1).Yeo7Networks, ...
@@ -15,8 +16,8 @@ disp(['threshold is ', num2str(threshold)]);
 % spmNeuromorphometric resliced to 1*1*1 mm^3 (Nearest Neighborhood; Original: 1.5*1.5*1.5)
 atlas_set = {'spmNeuromorphometrics'; 'AAL3v1';'cat12anatomy3'};
 
-% reslice ica map to smp12 label nifti resolution £¨1*1*1£©
-% ²»ÄÜreslice atlasµ½icaÎÄ¼ş¿Õ¼ä£¬»á²úÉúÔ­indexÍâµÄÖµ£¨ÆäËû²åÖµ£©£¬»ò¼õÉÙindex£¨×î½üÁÚ²åÖµ£©
+% reslice ica map to smp12 label nifti resolution ï¼ˆ1*1*1ï¼‰
+% ä¸èƒ½reslice atlasåˆ°icaæ–‡ä»¶ç©ºé—´ï¼Œä¼šäº§ç”ŸåŸindexå¤–çš„å€¼ï¼ˆå…¶ä»–æ’å€¼ï¼‰ï¼Œæˆ–å‡å°‘indexï¼ˆæœ€è¿‘é‚»æ’å€¼ï¼‰
 disp('Resize nii file to match label file (1mm * 1mm * 1mm) ing...');
 resize_img(nii_map,[1 1 1], nan(2,3));
 
@@ -53,7 +54,7 @@ for i = 1:numel(atlas_set)
 
     % start to calculate
     if numel(size(rnii_data)) == 3 % if only one volume
-        command = ['[Results(1,1).', atlas_set{i}, ', Results(1,1).MaxRegion', atlas_set{i}, '] = getlabel_fromVolume(squeeze(rnii_data(:,:,:,n)), threshold, label_data, label_indexs, label_names);'];
+        command = ['[Results(1,1).', atlas_set{i}, ', Results(1,1).MaxRegion', atlas_set{i}, '] = getlabel_fromVolume(rnii_data, threshold, label_data, label_indexs, label_names);'];
         eval(command);
     elseif numel(size(rnii_data)) == 4 % if multiple volumes
 %         Results = repmat(Results, size(rnii_data, 4), 1); % make row = ics'number
@@ -120,6 +121,7 @@ delete(label_map);
 % End of Yeo 7 networks part
 Results(1,1).Threshold = threshold;
 % -----------------------End of code-------------------------------%
+toc;
 end
 
 
@@ -163,6 +165,10 @@ function [Report, maxRegion] = getlabel_fromVolume(rnii_data, threshold, label_d
     VoxelMass = [VoxelMass; upthresh_VoxelMass - sum(VoxelMass)];
 
     Report = table(VoxelSize, Voxel_upThresh_Perc, VoxelMass, anatLabel);
+    % sort by descend
+    [~, newInd] = sort(VoxelSize, 'descend');
+    Report = Report(newInd, :);
+    
     if isempty(anatLabel) % if no upper threshold voxel with label
         maxRegion =NaN;
     else
