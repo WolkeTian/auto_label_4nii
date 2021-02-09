@@ -1,0 +1,17 @@
+Visual1
+Visual2
+Somatosensory3
+Somatosensory4
+Dorsal Attention5
+Dorsal Attention6
+Ventral Attention7
+Ventral Attention8
+Limbic9
+Limbic10
+Frontoparietal11
+Frontoparietal12
+Frontoparietal13
+Frontoparietal14
+Default15
+Default16
+Default17
