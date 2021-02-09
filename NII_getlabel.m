@@ -67,59 +67,67 @@ for i = 1:numel(atlas_set)
 %     delete(label_map); % delete .nii
 %     Results(1,1).Resolution = [Results(1,1).Resolution; ['Report based on ', atlas_set{i}, ' Label file Resolution ', num2str(label_dims)]];
 end
-
+Results(1,1).atlasResolution = [1, 1, 1];
 % --------------------------atlas part end-------------------------------
 
-%% reference map: yeo 7 networks (from conn dir)
+%% reference map: yeo 7/17 networks
 % voxel statistics reported based on original resolution
 % conn_roisPath = fullfile(fileparts(which('conn')), 'utils', 'otherrois');
 % label_map = fullfile(conn_roisPath, 'Yeo2011.nii');
 % label_txt = fullfile(conn_roisPath, 'Yeo2011.txt');
-gunzip('Yeo_7Nets.nii.gz');
-label_map = 'Yeo_7Nets.nii';
-label_txt = 'Yeo_7Nets.txt';
-label_names = importdata(label_txt);
-label_indexs = 1:7;
+nets_set = {'Yeo_7Nets'; 'Yeo_17Nets'};
+for j = 1:numel(nets_set)
+    gunzip([nets_set{j}, '.nii.gz']);
+    label_map = [nets_set{j}, '.nii'];
+    label_txt = [nets_set{j}, '.txt'];
+    label_names = importdata(label_txt);
+    label_indexs = 1:numel(label_names);
 
-% reslice yeomap to match nii map
-matlabbatch{1}.spm.spatial.coreg.write.ref = {[which(nii_map), ',1']};
-matlabbatch{1}.spm.spatial.coreg.write.source = {[label_map, ',1']};
-matlabbatch{1}.spm.spatial.coreg.write.roptions.interp = 0; % Nearest neighborhood
-matlabbatch{1}.spm.spatial.coreg.write.roptions.wrap = [0 0 0];
-matlabbatch{1}.spm.spatial.coreg.write.roptions.mask = 0;
-matlabbatch{1}.spm.spatial.coreg.write.roptions.prefix = 'rcoreg';
+    % reslice yeomap to match nii map
+    matlabbatch{1}.spm.spatial.coreg.write.ref = {[which(nii_map), ',1']};
+    matlabbatch{1}.spm.spatial.coreg.write.source = {[label_map, ',1']};
+    matlabbatch{1}.spm.spatial.coreg.write.roptions.interp = 0; % Nearest neighborhood
+    matlabbatch{1}.spm.spatial.coreg.write.roptions.wrap = [0 0 0];
+    matlabbatch{1}.spm.spatial.coreg.write.roptions.mask = 0;
+    matlabbatch{1}.spm.spatial.coreg.write.roptions.prefix = 'rcoreg';
 
-spm('Defaults','fMRI');
-spm_jobman('initcfg');
-spm_jobman('run',matlabbatch);
+    spm('Defaults','fMRI');
+    spm_jobman('initcfg');
+    spm_jobman('run',matlabbatch);
 
-% load nifti data
-nii_data = niftiread(nii_map);
-% load resliced yeo map
-rlabel_map = 'rcoregYeo_7Nets.nii';
+    % load nifti data
+    nii_data = niftiread(nii_map);
+    % load resliced yeo map
+    rlabel_map = ['rcoreg', label_map];
 
-label_data = niftiread(rlabel_map);
+    label_data = niftiread(rlabel_map);
 
-% delete resliced label map
-delete(rlabel_map);
+    % delete resliced label map
+    delete(rlabel_map);
 
-if numel(size(nii_data)) == 3 % if only one volume
-    [Results(1,1).Yeo7Networks, Results(1,1).MaxNet] = getlabel_fromVolume(nii_data, threshold, label_data, label_indexs, label_names);
-elseif numel(size(nii_data)) == 4 % if multiple volumes
-    for n = 1:size(nii_data, 4)
-        % loop for every volume
-        [Results(n,1).Yeo7Networks, Results(n,1).MaxNet] = getlabel_fromVolume(squeeze(nii_data(:,:,:,n)), threshold, label_data, label_indexs, label_names);
+    if numel(size(nii_data)) == 3 % if only one volume
+        %[Results(1,1).Yeo7Networks, Results(1,1).MaxNet] = getlabel_fromVolume(nii_data, threshold, label_data, label_indexs, label_names);
+        command = ['[Results(1,1).', nets_set{j}, ', Results(1,1).MaxRegion', nets_set{j}, '] = getlabel_fromVolume(nii_data, threshold, label_data, label_indexs, label_names);'];
+        eval(command);
+    elseif numel(size(nii_data)) == 4 % if multiple volumes
+        for n = 1:size(nii_data, 4)
+            % loop for every volume
+            %[Results(n,1).Yeo7Networks, Results(n,1).MaxNet] = getlabel_fromVolume(squeeze(nii_data(:,:,:,n)), threshold, label_data, label_indexs, label_names);
+            command = ['[Results(n,1).', nets_set{j}, ', Results(n,1).MaxRegion', nets_set{j}, '] = getlabel_fromVolume(squeeze(nii_data(:,:,:,n)), threshold, label_data, label_indexs, label_names);'];
+            eval(command);
+        end
     end
-end
-% get nii dimensions info
-nii_info = niftiinfo(nii_map);
-nii_dims = nii_info.PixelDimensions;
-% Results(1,1).Resolution = [Results(1,1).Resolution; ...
-%     {['Yeo 7 networks Report based on: Original Niftis Resolution ', num2str(nii_dims)]}];
+    % get nii dimensions info
+    nii_info = niftiinfo(nii_map);
+    nii_dims = nii_info.PixelDimensions;
+    % Results(1,1).Resolution = [Results(1,1).Resolution; ...
+    %     {['Yeo 7 networks Report based on: Original Niftis Resolution ', num2str(nii_dims)]}];
 
-delete(label_map);
+    delete(label_map);
+end
 % End of Yeo 7 networks part
 Results(1,1).Threshold = threshold;
+Results(1,1).netsResolution = nii_dims(1:3);
 % -----------------------End of code-------------------------------%
 toc;
 end
@@ -169,7 +177,7 @@ function [Report, maxRegion] = getlabel_fromVolume(rnii_data, threshold, label_d
     [~, newInd] = sort(VoxelSize, 'descend');
     Report = Report(newInd, :);
     
-    if isempty(anatLabel) % if no upper threshold voxel with label
+    if VoxelSize(1) == 0 % if no upper threshold voxel with label
         maxRegion =NaN;
     else
         maxRegion = anatLabel(1);
