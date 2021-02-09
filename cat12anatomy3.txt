@@ -1,0 +1,186 @@
+lMotor_4p;Left Area 4p;Area 4p
+rMotor_4p;Right Area 4p;Area 4p
+lIPL_PGa;Left Area PGa (IPL);Area PGa (IPL)
+rIPL_PGa;Right Area PGa (IPL);Area PGa (IPL)
+lAIPS_IP2;Left Area hIP2 (IPS);Area hIP2 (IPS)
+rAIPS_IP2;Right Area hIP2 (IPS);Area hIP2 (IPS)
+lCingulum_s24;Left Area s24;Area s24
+rCingulum_s24;Right Area s24;Area s24
+lVisual_hOc6;Left Area hOc6 [V6];Area hOc6 [V6]
+rVisual_hOc6;Right Area hOc6 [V6];Area hOc6 [V6]
+lOperculum_OP3;Left Area OP3 [VS];Area OP3 [VS]
+rOperculum_OP3;Right Area OP3 [VS];Area OP3 [VS]
+lSPL_5L;Left Area 5L (SPL);Area 5L (SPL)
+rSPL_5L;Right Area 5L (SPL);Area 5L (SPL)
+lHippocampus_CA;Left CA1 (Hippocampus);CA1 (Hippocampus)
+rHippocampus_CA;Right CA1 (Hippocampus);CA1 (Hippocampus)
+lVisual_hOc4v;Left Area hOc4v [V4(v)];Area hOc4v [V4(v)]
+rVisual_hOc4v;Right Area hOc4v [V4(v)];Area hOc4v [V4(v)]
+lCerebellum_Ninterp;Left  Interposed Ncl.; Interposed Ncl.
+rCerebellum_Ninterp;Right  Interposed Ncl.; Interposed Ncl.
+lPremotor_6d2;Left Area 6d2;Area 6d2
+rPremotor_6d2;Right Area 6d2;Area 6d2
+lVisual_FG2;Left Area FG2;Area FG2
+rVisual_FG2;Right Area FG2;Area FG2
+lCingulum_25;Left Area 25;Area 25
+rCingulum_25;Right Area 25;Area 25
+lPIPS_hIP5;Left Area hIP5 (IPS);Area hIP5 (IPS)
+rPIPS_hIP5;Right Area hIP5 (IPS);Area hIP5 (IPS)
+lAuditory_Te10;Left Area TE 1.0;Area TE 1.0
+rAuditory_Te10;Right Area TE 1.0;Area TE 1.0
+lIPL_PFt;Left Area PFt (IPL);Area PFt (IPL)
+rIPL_PFt;Right Area PFt (IPL);Area PFt (IPL)
+lVisual_hOc4d;Left Area hOc4d [V3A];Area hOc4d [V3A]
+rVisual_hOc4d;Right Area hOc4d [V3A];Area hOc4d [V3A]
+lCingulum_33;Left Area 33;Area 33
+rCingulum_33;Right Area 33;Area 33
+lCingulum_p24ab;Left Area p24ab;Area p24ab
+rCingulum_p24ab;Right Area p24ab;Area p24ab
+lSPL_7M;Left Area 7M (SPL);Area 7M (SPL)
+rSPL_7M;Right Area 7M (SPL);Area 7M (SPL)
+lOperculum_OP4;Left Area OP4 [PV];Area OP4 [PV]
+rOperculum_OP4;Right Area OP4 [PV];Area OP4 [PV]
+lIPL_PFm;Left Area PFm (IPL);Area PFm (IPL)
+rIPL_PFm;Right Area PFm (IPL);Area PFm (IPL)
+lPremotor_6d3;Left Area 6d3;Area 6d3
+rPremotor_6d3;Right Area 6d3;Area 6d3
+lVisual_hOc2;Left Area hOc2 [V2];Area hOc2 [V2]
+rVisual_hOc2;Right Area hOc2 [V2];Area hOc2 [V2]
+lAIPS_IP1;Left Area hIP1 (IPS);Area hIP1 (IPS)
+rAIPS_IP1;Right Area hIP1 (IPS);Area hIP1 (IPS)
+lCerebellum_Ndentv;Left Ventral Dentate Ncl.;Ventral Dentate Ncl.
+rCerebellum_Ndentv;Right Ventral Dentate Ncl.;Ventral Dentate Ncl.
+lBforebrain_4;Left BF (Ch 4);BF (Ch 4)
+rBforebrain_4;Right BF (Ch 4);BF (Ch 4)
+lSPL_7P;Left Area 7P (SPL);Area 7P (SPL)
+rSPL_7P;Right Area 7P (SPL);Area 7P (SPL)
+lVisual_hOc4la;Left Area hOc4la;Area hOc4la
+rVisual_hOc4la;Right Area hOc4la;Area hOc4la
+lVisual_hOc5;Left Area hOc5 [V5/MT];Area hOc5 [V5/MT]
+rVisual_hOc5;Right Area hOc5 [V5/MT];Area hOc5 [V5/MT]
+lBforebrain_123;Left BF (Ch 1-3);BF (Ch 1-3)
+rBforebrain_123;Right BF (Ch 1-3);BF (Ch 1-3)
+lAmygdala_CM;Left Amygdala (CM);Amygdala (CM)
+rAmygdala_CM;Right Amygdala (CM);Amygdala (CM)
+lPSC_1;Left Area 1;Area 1
+rPSC_1;Right Area 1;Area 1
+lInsula_Id7;Left Area Id7;Area Id7
+rInsula_Id7;Right Area Id7;Area Id7
+lVisual_hOc3v;Left Area hOc3v [V3v];Area hOc3v [V3v]
+rVisual_hOc3v;Right Area hOc3v [V3v];Area hOc3v [V3v]
+lInsula_Id1;Left Area Id1;Area Id1
+rInsula_Id1;Right Area Id1;Area Id1
+lOperculum_OP9;Left Area OP9;Area OP9
+rOperculum_OP9;Right Area OP9;Area OP9
+lInsula_Ig1;Left Area Ig1;Area Ig1
+rInsula_Ig1;Right Area Ig1;Area Ig1
+lSPL_7A;Left Area 7A (SPL);Area 7A (SPL)
+rSPL_7A;Right Area 7A (SPL);Area 7A (SPL)
+lOperculum_OP1;Left Area OP1 [SII];Area OP1 [SII]
+rOperculum_OP1;Right Area OP1 [SII];Area OP1 [SII]
+lSPL_5Ci;Left Area 5Ci (SPL);Area 5Ci (SPL)
+rSPL_5Ci;Right Area 5Ci (SPL);Area 5Ci (SPL)
+lIPL_PFop;Left Area PFop (IPL);Area PFop (IPL)
+rIPL_PFop;Right Area PFop (IPL);Area PFop (IPL)
+lPSC_2;Left Area 2;Area 2
+rPSC_2;Right Area 2;Area 2
+lCerebellum_Ndentd;Left Dorsal Dentate Ncl.;Dorsal Dentate Ncl.
+rCerebellum_Ndentd;Right Dorsal Dentate Ncl.;Dorsal Dentate Ncl.
+lAmygdala_VTM;Left Amygdala (VTM);Amygdala (VTM)
+rAmygdala_VTM;Right Amygdala (VTM);Amygdala (VTM)
+lOperculum_OP2;Left Area OP2 [PIVC];Area OP2 [PIVC]
+rOperculum_OP2;Right Area OP2 [PIVC];Area OP2 [PIVC]
+lPSC_3a;Left Area 3a;Area 3a
+rPSC_3a;Right Area 3a;Area 3a
+lInsula_Ig2;Left Area Ig2;Area Ig2
+rInsula_Ig2;Right Area Ig2;Area Ig2
+lSupplementarymotor_sma;Left Area 6mc / SMA;Area 6mc / SMA
+rSupplementarymotor_sma;Right Area 6mc / SMA;Area 6mc / SMA
+lAuditory_Te11;Left Area TE 1.1;Area TE 1.1
+rAuditory_Te11;Right Area TE 1.1;Area TE 1.1
+lAmygdala_MF;Left Amygdala (MF);Amygdala (MF)
+rAmygdala_MF;Right Amygdala (MF);Amygdala (MF)
+lIPL_PFcm;Left Area PFcm (IPL);Area PFcm (IPL)
+rIPL_PFcm;Right Area PFcm (IPL);Area PFcm (IPL)
+lSPL_5M;Left Area 5M (SPL);Area 5M (SPL)
+rSPL_5M;Right Area 5M (SPL);Area 5M (SPL)
+lAmygdala_SF;Left Amygdala (SF);Amygdala (SF)
+rAmygdala_SF;Right Amygdala (SF);Amygdala (SF)
+lAmygdala_IF;Left Amygdala (IF);Amygdala (IF)
+rAmygdala_IF;Right Amygdala (IF);Amygdala (IF)
+lPIPS_hIP7;Left Area hIP7 (IPS);Area hIP7 (IPS)
+rPIPS_hIP7;Right Area hIP7 (IPS);Area hIP7 (IPS)
+lOFC_Fo2;Left Area Fo2;Area Fo2
+rOFC_Fo2;Right Area Fo2;Area Fo2
+lVisual_hOc1;Left Area hOc1 [V1];Area hOc1 [V1]
+rVisual_hOc1;Right Area hOc1 [V1];Area hOc1 [V1]
+lBroca_44;Left Area 44;Area 44
+rBroca_44;Right Area 44;Area 44
+lCingulum_p32;Left Area p32;Area p32
+rCingulum_p32;Right Area p32;Area p32
+lVisual_hOc3d;Left Area hOc3d [V3d];Area hOc3d [V3d]
+rVisual_hOc3d;Right Area hOc3d [V3d];Area hOc3d [V3d]
+lCingulum_p24c;Left Area p24c;Area p24c
+rCingulum_p24c;Right Area p24c;Area p24c
+lAIPS_IP3;Left Area hIP3 (IPS);Area hIP3 (IPS)
+rAIPS_IP3;Right Area hIP3 (IPS);Area hIP3 (IPS)
+lBroca_45;Left Area 45;Area 45
+rBroca_45;Right Area 45;Area 45
+lMotor_4a;Left Area 4a;Area 4a
+rMotor_4a;Right Area 4a;Area 4a
+lOperculum_OP8;Left Area OP8;Area OP8
+rOperculum_OP8;Right Area OP8;Area OP8
+lSupplementarymotor_presma;Left Area 6mr / preSMA;Area 6mr / preSMA
+rSupplementarymotor_presma;Right Area 6mr / preSMA;Area 6mr / preSMA
+lAmygdala_LB;Left Amygdala (LB);Amygdala (LB)
+rAmygdala_LB;Right Amygdala (LB);Amygdala (LB)
+lPIPS_hIP8;Left Area hIP8 (IPS);Area hIP8 (IPS)
+rPIPS_hIP8;Right Area hIP8 (IPS);Area hIP8 (IPS)
+lFrontalPole_Fp1;Left Area Fp1;Area Fp1
+rFrontalPole_Fp1;Right Area Fp1;Area Fp1
+lVisual_FG4;Left Area FG4;Area FG4
+rVisual_FG4;Right Area FG4;Area FG4
+lFrontalPole_Fp2;Left Area Fp2;Area Fp2
+rFrontalPole_Fp2;Right Area Fp2;Area Fp2
+lVisual_FG3;Left Area FG3;Area FG3
+rVisual_FG3;Right Area FG3;Area FG3
+lPSC_3b;Left Area 3b;Area 3b
+rPSC_3b;Right Area 3b;Area 3b
+lIPL_PF;Left Area PF (IPL);Area PF (IPL)
+rIPL_PF;Right Area PF (IPL);Area PF (IPL)
+lPremotor_6d1;Left Area 6d1;Area 6d1
+rPremotor_6d1;Right Area 6d1;Area 6d1
+lOFC_Fo1;Left Area Fo1;Area Fo1
+rOFC_Fo1;Right Area Fo1;Area Fo1
+lAuditory_Te12;Left Area TE 1.2;Area TE 1.2
+rAuditory_Te12;Right Area TE 1.2;Area TE 1.2
+lOFC_Fo3;Left Area Fo3;Area Fo3
+rOFC_Fo3;Right Area Fo3;Area Fo3
+lHippocampus_Subc;Left Subiculum;Subiculum
+rHippocampus_Subc;Right Subiculum;Subiculum
+lHippocampus_DG;Left DG (Hippocampus);DG (Hippocampus)
+rHippocampus_DG;Right DG (Hippocampus);DG (Hippocampus)
+lAuditory_Te3;Left Area TE 3;Area TE 3
+rAuditory_Te3;Right Area TE 3;Area TE 3
+lVisual_hOc4lp;Left Area hOc4lp;Area hOc4lp
+rVisual_hOc4lp;Right Area hOc4lp;Area hOc4lp
+lPIPS_hIP4;Left Area hIP4 (IPS);Area hIP4 (IPS)
+rPIPS_hIP4;Right Area hIP4 (IPS);Area hIP4 (IPS)
+lSPL_7PC;Left Area 7PC (SPL);Area 7PC (SPL)
+rSPL_7PC;Right Area 7PC (SPL);Area 7PC (SPL)
+lVisual_FG1;Left Area FG1;Area FG1
+rVisual_FG1;Right Area FG1;Area FG1
+lCingulum_s32;Left Area s32;Area s32
+rCingulum_s32;Right Area s32;Area s32
+lHippocampus_EC;Left Entorhinal Cortex;Entorhinal Cortex
+rHippocampus_EC;Right Entorhinal Cortex;Entorhinal Cortex
+lIPL_PGp;Left Area PGp (IPL);Area PGp (IPL)
+rIPL_PGp;Right Area PGp (IPL);Area PGp (IPL)
+lCerebellum_Nfast;Left Fastigial Ncl.;Fastigial Ncl.
+rCerebellum_Nfast;Right Fastigial Ncl.;Fastigial Ncl.
+lHippocampus_HATA;Left HATA Region;HATA Region
+rHippocampus_HATA;Right HATA Region;HATA Region
+lPIPS_hIP6;Left Area hIP6 (IPS);Area hIP6 (IPS)
+rPIPS_hIP6;Right Area hIP6 (IPS);Area hIP6 (IPS)
+lPIPS_hPO1;Left Area hPO1 (IPS);Area hPO1 (IPS)
+rPIPS_hPO1;Right Area hPO1 (IPS);Area hPO1 (IPS)
