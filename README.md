@@ -5,7 +5,7 @@ Support 3D Nifti & 4D Nifti Data
 使用：
 Results = NII_getlabel('ICA.Maps.nii'); % 阈值默认1
 
-Results = NII_getlabel('ICA.Maps.nii'， threshold); % 手动规定阈值
+Results = NII_getlabel('ICA.Maps.nii', threshold); % 手动规定阈值
 
 结果：
 报告参考模板（atlas/Networks)，得到每个Region/Network阈上体素的voxel size（数量），百分比（该region阈上体素数量比所有阈上体素数量），和voxel mass（阈上体素的值的和，不止考虑数量也考虑体素值本身大小），以及阈上voxel size最大的区域（MaxRegion)。
