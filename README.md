@@ -1,8 +1,10 @@
 # auto_label_4nii
 Auto get anatomy label for nifti file, mainly help to identify ICA map.
 Support 3D Nifti & 4D Nifti Data
+
 使用：
-Results = NII_getlabel('ICA.Maps.nii'); % 阈值默认2
+Results = NII_getlabel('ICA.Maps.nii'); % 阈值默认1
+
 Results = NII_getlabel('ICA.Maps.nii'， threshold); % 手动规定阈值
 
 结果：
