@@ -2,7 +2,7 @@ function Results = NII_getlabel(nii_map, threshold)
 % reference map: spm12 Neuromorphometrics, resolution: 1.5mm
 % add reference map: yeo 7 networks (from conn dir), resolution: 1mm
 if ( ~exist('threshold', 'var') || isempty(threshold) )
-    threshold = 2; % default threshold set to 2
+    threshold = 1; % default threshold set to 1
 end
 tic;
 disp(['threshold is ', num2str(threshold)]);
