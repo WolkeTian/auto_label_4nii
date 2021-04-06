@@ -34,7 +34,7 @@ for i = 1:numel(atlas_set)
     % prepare
 
     % unzip .nii.gz
-    disp(['Calculationg report for ',atlas_set{i}]);
+    disp(['Calculating report for ',atlas_set{i}]);
     label_map = [atlas_set{i}, '.nii.gz'];
 %     label_gz = [atlas_set{i}, '.nii.gz'];
 %     gunzip(label_gz);
