@@ -25,7 +25,9 @@ resize_img(nii_map,[1 1 1], nan(2,3));
 [fpath, fname] = fileparts(nii_map);
 rnii_map = fullfile(fpath, ['r', fname, '.nii']);
 
-rnii_data = niftiread(rnii_map);
+% rnii_data = niftiread(rnii_map);
+v_struct = spm_vol(rnii_map);
+rnii_data = spm_read_vols(v_struct);
 
 % delete resliced nii map
 delete(rnii_map);
